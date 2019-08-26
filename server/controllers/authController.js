@@ -30,7 +30,7 @@ module.exports = {
   },
   signout: (req, res) => {
     req.session.destroy();
-    res.status(200).send(session.user);
+    res.status(200).send(req.session);
   },
   getUser: (req, res) => {
     const { session } = req;
